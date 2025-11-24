@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand" href="#"><img src="/images/logo.svg" alt=""></a>
+        <!-- offcanvas just phone -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- navbar just desktoop -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Features
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><img class="me-2" src="/images/icon-todo.svg"> <span>Todo List</span></a></li>
+                <li><a class="dropdown-item" href="#"><img class="me-2" src="/images/icon-calendar.svg"> <span>Calendar</span></a></li>
+                <li><a class="dropdown-item" href="#"><img class="me-2" src="/images/icon-reminders.svg"> <span>Reminders</span></a></li>
+                <li><a class="dropdown-item" href="#"><img class="me-2" src="/images/icon-planning.svg"> <span>Planning</span></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Company
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">History</a></li>
+                <li><a class="dropdown-item" href="#">Our Team</a></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <div class="navbar-link">
+            <a href="#">Login</a>
+            <a href="#" id="register">Register</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- offcanvas just phone -->
+    <div class="offcanvas offcanvas-end w-50 d-md-none" tabindex="-1" id="offcanvas">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav mb-2">
+          <li class="nav-item ">
+            <a class="nav-link arrow" href="#" data-bs-toggle="collapse" data-bs-target="#collapse-Features">
+              Features <span class="ms-1"></span>
+            </a>
+            <ul class="collapse" id="collapse-Features">
+              <li><a href="#"><img class="me-2" src="/images/icon-todo.svg"> <span>Todo List</span></a></li>
+              <li><a href="#"><img class="me-2" src="/images/icon-calendar.svg"> <span>Calendar</span></a></li>
+              <li><a href="#"><img class="me-2" src="/images/icon-reminders.svg"> <span>Reminders</span></a></li>
+              <li><a href="#"><img class="me-2" src="/images/icon-planning.svg"> <span>Planning</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link arrow" href="#" data-bs-toggle="collapse" data-bs-target="#collapse-Company">
+              Company <span class="ms-1"></span>
+            </a>
+            <ul class="collapse" id="collapse-Company">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <div class="d-flex flex-column gap-2 link-custom">
+            <a href="#">Login</a>
+            <a href="#" id="registerPhone">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- page content -->
+  <main>
+    <div class="row flex-column-reverse flex-md-row content">
+      <div class="col-6 section-left">
+        <h1>Make remote work</h1>
+        <div class="section-left-body">
+          <p>
+            Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.
+          </p>
+          <a class="my-4" href="#">Learn more</a>
+        </div>
+        <div class="box-image">
+          <img class="image-custom" src="/images/client-databiz.svg">
+          <img class="image-custom" src="/images/client-audiophile.svg">
+          <img class="image-custom" src="/images/client-meet.svg">
+          <img class="image-custom" src="/images/client-maker.svg">
+        </div>
+      </div>
+      <div class="col-4 section-right">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png">
+          <source media="(min-width: 1px)" srcset="./images/image-hero-mobile.png">
+          <img src="./images/image-hero-mobile.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
